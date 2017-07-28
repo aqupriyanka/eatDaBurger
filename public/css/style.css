@@ -1,0 +1,101 @@
+.pacman {
+    position: absolute;
+    top: 2px;
+    left: 50px;
+    border-radius: 50%;
+    border: 49px solid green;
+    /*-webkit-animation: pacman .3s ease-in-out infinite;*/
+    /*-ms-animation: pacman .5s ease-in-out infinite;
+    -moz-animation: pacman .5s ease-in-out infinite;*/
+    /*animation: pacman .3s ease-in-out infinite;*/
+}
+@-webkit-keyframes pacman {
+    0% {
+        border-right: 49px solid transparent;
+    }
+    50% {
+        border-right: 49px solid green;
+    }
+    100% {
+        border-right: 49px solid transparent;
+    }
+}
+
+@keyframes pacman {
+    0% {
+        border-right: 49px solid transparent;
+    }
+    50% {
+        border-right: 49px solid green;
+    }
+    100% {
+        border-right: 49px solid transparent;
+    }
+}
+
+
+.input-group-rounded .input-group-field {
+  border-radius: 5000px 0 0 5000px;
+  padding-left: 1.2rem;
+}
+
+.input-group-rounded .input-group-button .button {
+  border-radius: 0 5000px 5000px 0;
+  font-size: 1.8rem;
+}
+
+
+.subscription-footer {
+  background: black;
+  color: red;
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+  bottom: 25px;
+  display: block;
+  height: 50px;
+  left: 0;
+  padding: 15px 10px 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.subscription-input{
+    max-width: 40%;
+    position: absolute;
+    left: 40%;
+    right: 30%;
+}
+
+.subscription-label{
+    width: 30%;
+    position: absolute;
+    left: 0;
+}
+.subscription-wrapper{
+    position: relative;
+}
+
+.subscription-button{
+    position: absolute;
+    width: 10%;
+    right: 10%;
+}
+
+body{
+    background-color: blanchedalmond;
+    background-image: url("/img/Quadruple_Cheeseburger.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-origin: content-box;
+    background-attachment: fixed;
+    padding: 10px;
+    
+}
+label{
+    font-size: 16px;
+    margin-top: 8px;
+}
+h1{
+    font-family: 'Lobster', cursive;
+}

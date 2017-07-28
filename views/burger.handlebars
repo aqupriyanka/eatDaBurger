@@ -1,0 +1,97 @@
+
+
+
+
+<div style="float:left;margin-top:5%;position:relative;margin-left:5%" id="burgerDiv">
+	
+
+<h2>MENU</h2>
+	
+	<div class="panel panel-default" >
+		<div class="panel-heading" style="width:300px;" data-toggle="collapse" data-target="#all-burgers">
+			<h3 class="panel-title"><strong>MENU </strong> <span class="glyphicon glyphicon-chevron-down" style="margin-left:200px;" id="burgerArrow"></span></h3>
+		</div>
+
+		<div id="all-burgers">
+			{{#each burgers}}
+
+			<div class="panel-body" style="padding:0;">
+
+ 		<form action="/{{burger_name}}?_method=PUT" method="POST" style="width:10px;">
+
+          <button class="btn btn-default" type="submit" style="width:300px;"data-toggle="tooltip" data-placement="bottom" title="Devour it">{{burger_name}}</button>
+        </form> 
+
+        	
+
+		</div>
+		
+	{{/each}}
+
+		<div class="panel-body" style="padding:0;display:none" id="no-items">
+        		<h4 style="color:red" class="text-center">No Menu items to Display</h4>
+        	</div>
+	</div>
+	</div>
+
+</div>
+
+
+<div style="margin-top:5%;float:right;margin-right:5%">
+<h2>DEVOURED MENU</h2>
+
+<div class="panel panel-default">
+	<div class="panel-heading" style="width:300px;" data-toggle="collapse" data-target="#devouredBurgers">
+			<h3 class="panel-title"><strong>Menu</strong><span class="glyphicon glyphicon-chevron-down" style="margin-left:200px;" id="deBurgerArrow"></span></h3>
+	</div>
+
+
+	<div id="devouredBurgers">
+
+	{{#each deBurgers}}
+
+		<div class="panel-body" style="padding:0;">
+
+ 		<form action="/{{burger_name}}?_method=DELETE" method="POST">
+
+		<button class="btn btn-default" style="width:300px;"data-toggle="tooltip" data-placement="bottom" title="Delete it">{{burger_name}}</button>
+
+        </form> 
+        </div>
+
+	{{/each}}
+
+		<div class="panel-body" style="padding:0;display:none" id="no-deitems">
+        		<h4 style="color:red" class="text-center">No Menu items to Display</h4>
+        	</div>
+	</div>
+	</div>
+</div>
+
+
+<div style="clear:both"></div>
+<br><br>
+
+<!-- ADD A BURGER WITH DEVOURED FALSE -->
+<div style="margin-bottom:10px;" class="text-center">
+
+<div class="subscription-footer">
+	<div class="subscription-wrapper"> 
+	<form action="/" method="POST" class="form">
+			  <label class="subscription-label">Enter the burger you want to eat !!</label>
+			  <input class="form-control subscription-input" type="text" id="comment" name="name">
+			  <input type="submit" class="btn btn-danger subscription-button" value="Submit">
+			
+		</form>
+		</div>
+	</div>
+</div>
+
+
+
+<!--
+			<textarea class="form-control" rows="4" cols="1" id="comment" style="max-width:10%;margin: auto;" name="name"></textarea>
+			<label>Enter the burger you want to eat !!</label>
+			<button class="btn btn-primary">Submit</button>
+
+			-->
